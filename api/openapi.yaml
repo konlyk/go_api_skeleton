@@ -1,0 +1,40 @@
+openapi: 3.0.3
+info:
+  title: Go API Skeleton
+  version: 1.0.0
+  description: OpenAPI contract for the reusable Go API skeleton.
+  license:
+    name: MIT
+    url: https://opensource.org/license/mit
+servers:
+  - url: /
+tags:
+  - name: Utility
+    description: Utility endpoints.
+  - name: Health
+    description: Kubernetes probe endpoints.
+security: []
+paths:
+  /v1/ping:
+    $ref: ./paths/ping.yaml
+  /v1/hello:
+    $ref: ./paths/hello.yaml
+  /livez:
+    $ref: ./paths/livez.yaml
+  /readyz:
+    $ref: ./paths/readyz.yaml
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: opaque
+  schemas:
+    PingResponse:
+      $ref: ./components/schemas/PingResponse.yaml
+    HelloResponse:
+      $ref: ./components/schemas/HelloResponse.yaml
+    HealthResponse:
+      $ref: ./components/schemas/HealthResponse.yaml
+    ErrorResponse:
+      $ref: ./components/schemas/ErrorResponse.yaml

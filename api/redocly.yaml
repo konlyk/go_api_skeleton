@@ -1,0 +1,5 @@
+apis:
+  go-api-skeleton:
+    root: ./openapi.yaml
+extends:
+  - recommended

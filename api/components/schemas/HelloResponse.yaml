@@ -1,0 +1,9 @@
+type: object
+required: [message, timestamp]
+properties:
+  message:
+    type: string
+    example: hello world
+  timestamp:
+    type: string
+    format: date-time

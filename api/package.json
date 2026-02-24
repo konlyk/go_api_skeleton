@@ -1,0 +1,12 @@
+{
+  "name": "go-api-skeleton-openapi",
+  "private": true,
+  "scripts": {
+    "lint": "redocly lint go-api-skeleton",
+    "bundle": "redocly bundle go-api-skeleton --output openapi.bundled.yaml",
+    "docs": "redocly build-docs openapi.bundled.yaml --output openapi.html"
+  },
+  "devDependencies": {
+    "@redocly/cli": "^1.34.5"
+  }
+}
